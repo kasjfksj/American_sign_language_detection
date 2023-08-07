@@ -1,0 +1,21 @@
+Problems encountered:
+1. Finding a dataset is difficult. Either the data quality is of poor quality, or the dataset is too large. 
+Finally, I reluctantly choosed a dataset of 1GB on Kaggle
+
+2. Without a GPU, parallel operations cannot be performed. Unable to use transformer, only traditional
+ CNN algorithm can be used for image recognition. 
+ 
+3. I tried running locally, but even if I cut the dataset by 4/5, the time of reading images was too long.
+ So I decided to rent a server online.
+
+4. Attempting to find a server, but generally requiring huge payment or bank card binding. Google Colab is a piece
+of junk, often disconnecting from the server. Finally, found Autodl, a relatively good computing platform
+
+5. Although the model was successfully trained in the end, at first it only outputed "nothing". I increased 
+the number of training epoch, and although the output did vary, none of the predictions were correct.
+
+6. I don't think making prediction solely based on images is very effective. I tried to use mediapipe to find 
+the position of each hand joints and then trained a simple MLP based on the positions. It did work out perfectly.
+
+7. I found out some images are pretty dim. So I made an auto adjustment of brightness of each picture. The prediction
+is more precise
